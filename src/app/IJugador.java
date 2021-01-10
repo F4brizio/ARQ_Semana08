@@ -1,5 +1,8 @@
 package app;
 
 public interface IJugador {
-    int puntaje = 0;
+
+
+    public void JugadaTurno();
+    public Elemento getJugada();
 }
