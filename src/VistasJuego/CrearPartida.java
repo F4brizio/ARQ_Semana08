@@ -38,13 +38,18 @@ public class CrearPartida extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setName("pnlcrearpartida"); // NOI18N
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setText("     CREAR PARTIDA");
+        jLabel1.setName("lblcrearpartida"); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("NOMBRE :");
+        jLabel2.setName("lblnombre"); // NOI18N
 
         jTextField1.setToolTipText("Ingrese Nombre...");
+        jTextField1.setName("txtnombre"); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -52,6 +57,7 @@ public class CrearPartida extends javax.swing.JFrame {
         });
 
         jRadioButton1.setText("PERSONA VS PERSONA");
+        jRadioButton1.setName("rdbtnpvp"); // NOI18N
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -59,9 +65,11 @@ public class CrearPartida extends javax.swing.JFrame {
         });
 
         jRadioButton2.setText("PERSONA VS MAQUINA");
+        jRadioButton2.setName("rdbtnpvm"); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setText("ELEGIR OPONENTE:");
+        jLabel3.setName("lblelegiroponente"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
