@@ -6,13 +6,26 @@ import app.IJugador;
 public class Persona implements IJugador {
     Elemento JugadaActual = null;
     int puntaje = 0;
-    @Override
-    public void JugadaTurno() {
+    public boolean tipo =false;
 
+    @Override
+    public int getPuntaje() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setPuntaje(int p) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void JugadaTurno(Elemento e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public Elemento getJugada() {
-        return null;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+ 
 }
