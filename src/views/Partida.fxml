@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="285.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Partida">
+   <children>
+      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="296.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="55.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="210.0" layoutY="12.0" text="Persona vs Persona">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Label>
+                  <Button layoutX="486.0" layoutY="14.0" mnemonicParsing="false" text="Guardar Partida" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e6e6e6;">
+               <children>
+                  <Pane layoutX="145.0" layoutY="27.0" prefHeight="146.0" prefWidth="146.0" style="-fx-border-color: #666; -fx-background-color: #fff;">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="146.0" prefWidth="146.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #404040; -fx-border-width: 0px;" text="Jugador" textFill="WHITE" />
+                              <VBox alignment="CENTER" prefHeight="76.0" prefWidth="72.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Piedra" />
+                                    <RadioButton mnemonicParsing="false" text="Papel" />
+                                    <RadioButton mnemonicParsing="false" text="Tijera" />
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" text="Dar Jugada" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="310.0" layoutY="27.0" prefHeight="146.0" prefWidth="146.0" style="-fx-border-color: #666; -fx-background-color: #fff;">
+                     <children>
+                        <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="146.0" prefWidth="146.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #404040; -fx-border-width: 0px;" text="Jugador" textFill="WHITE" />
+                              <VBox alignment="CENTER" prefHeight="76.0" prefWidth="72.0">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Piedra" />
+                                    <RadioButton mnemonicParsing="false" text="Papel" />
+                                    <RadioButton mnemonicParsing="false" text="Tijera" />
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" text="Dar Jugada" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children></Pane>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="24.0" prefWidth="100.0" style="-fx-border-color: #666;" text="1 pts" />
+                  <Button mnemonicParsing="false" text="Evalular Partida" />
+                  <Label alignment="CENTER" prefHeight="24.0" prefWidth="100.0" style="-fx-border-color: #666;" text="3pts" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
