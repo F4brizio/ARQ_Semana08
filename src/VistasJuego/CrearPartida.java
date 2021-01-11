@@ -28,112 +28,112 @@ public class CrearPartida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        pnlcrearpartida = new javax.swing.JPanel();
+        lblcrearpartida = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
+        txtnombre = new javax.swing.JTextField();
+        rdbtnpvp = new javax.swing.JRadioButton();
+        rdbtnpvm = new javax.swing.JRadioButton();
+        lblelegiroponente = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setName("pnlcrearpartida"); // NOI18N
+        pnlcrearpartida.setName("pnlcrearpartida"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("     CREAR PARTIDA");
-        jLabel1.setName("lblcrearpartida"); // NOI18N
+        lblcrearpartida.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lblcrearpartida.setText("     CREAR PARTIDA");
+        lblcrearpartida.setName("lblcrearpartida"); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("NOMBRE :");
         jLabel2.setName("lblnombre"); // NOI18N
 
-        jTextField1.setToolTipText("Ingrese Nombre...");
-        jTextField1.setName("txtnombre"); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtnombre.setToolTipText("Ingrese Nombre...");
+        txtnombre.setName("txtnombre"); // NOI18N
+        txtnombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtnombreActionPerformed(evt);
             }
         });
 
-        jRadioButton1.setText("PERSONA VS PERSONA");
-        jRadioButton1.setName("rdbtnpvp"); // NOI18N
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        rdbtnpvp.setText("PERSONA VS PERSONA");
+        rdbtnpvp.setName("rdbtnpvp"); // NOI18N
+        rdbtnpvp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rdbtnpvpActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("PERSONA VS MAQUINA");
-        jRadioButton2.setName("rdbtnpvm"); // NOI18N
+        rdbtnpvm.setText("PERSONA VS MAQUINA");
+        rdbtnpvm.setName("rdbtnpvm"); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel3.setText("ELEGIR OPONENTE:");
-        jLabel3.setName("lblelegiroponente"); // NOI18N
+        lblelegiroponente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblelegiroponente.setText("ELEGIR OPONENTE:");
+        lblelegiroponente.setName("lblelegiroponente"); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlcrearpartidaLayout = new javax.swing.GroupLayout(pnlcrearpartida);
+        pnlcrearpartida.setLayout(pnlcrearpartidaLayout);
+        pnlcrearpartidaLayout.setHorizontalGroup(
+            pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlcrearpartidaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblcrearpartida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlcrearpartidaLayout.createSequentialGroup()
+                        .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlcrearpartidaLayout.createSequentialGroup()
+                                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
-                                    .addComponent(jRadioButton1))
+                                    .addComponent(rdbtnpvp))
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton2)))
-                            .addComponent(jLabel3))
+                                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rdbtnpvm)))
+                            .addComponent(lblelegiroponente))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlcrearpartidaLayout.setVerticalGroup(
+            pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlcrearpartidaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblcrearpartida, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(lblelegiroponente)
                 .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rdbtnpvp)
+                    .addComponent(rdbtnpvm))
                 .addGap(55, 55, 55))
         );
 
-        jTextField1.getAccessibleContext().setAccessibleName("");
+        txtnombre.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlcrearpartida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlcrearpartida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtnombreActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rdbtnpvpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnpvpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rdbtnpvpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,12 +171,12 @@ public class CrearPartida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblcrearpartida;
+    private javax.swing.JLabel lblelegiroponente;
+    private javax.swing.JPanel pnlcrearpartida;
+    private javax.swing.JRadioButton rdbtnpvm;
+    private javax.swing.JRadioButton rdbtnpvp;
+    private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 }

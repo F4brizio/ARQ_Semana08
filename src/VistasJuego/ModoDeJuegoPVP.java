@@ -30,195 +30,195 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
+        pnlpvp1 = new javax.swing.JPanel();
+        lblpersonavspersona = new javax.swing.JLabel();
+        btnevaluarpartida = new javax.swing.JToggleButton();
+        btnguardarpartida = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        txtpnj2 = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jPanel3 = new javax.swing.JPanel();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        txtpnj1 = new javax.swing.JTextPane();
+        pnlpvp2 = new javax.swing.JPanel();
+        lbljugador1 = new javax.swing.JLabel();
+        rdbtnpiedra1 = new javax.swing.JRadioButton();
+        rdbtnpapel1 = new javax.swing.JRadioButton();
+        rdbtntijera1 = new javax.swing.JRadioButton();
+        pnlpvp3 = new javax.swing.JPanel();
+        rdbtntiejra2 = new javax.swing.JRadioButton();
+        rdbtnpapel2 = new javax.swing.JRadioButton();
+        lbljugador2 = new javax.swing.JLabel();
+        rdbtnpiedra2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setName("pnlpvp1"); // NOI18N
+        pnlpvp1.setName("pnlpvp1"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        jLabel1.setText("PERSONA VS PERSONA");
-        jLabel1.setName("lblpersonavspersona"); // NOI18N
+        lblpersonavspersona.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        lblpersonavspersona.setText("PERSONA VS PERSONA");
+        lblpersonavspersona.setName("lblpersonavspersona"); // NOI18N
 
-        jToggleButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jToggleButton1.setText("EVALUAR PARTIDA");
-        jToggleButton1.setName("btnevaluarpartida"); // NOI18N
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnevaluarpartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnevaluarpartida.setText("EVALUAR PARTIDA");
+        btnevaluarpartida.setName("btnevaluarpartida"); // NOI18N
+        btnevaluarpartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                btnevaluarpartidaActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setText("GUARDAR PARTIDA");
-        jButton1.setName("btnguardarpartida"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnguardarpartida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnguardarpartida.setText("GUARDAR PARTIDA");
+        btnguardarpartida.setName("btnguardarpartida"); // NOI18N
+        btnguardarpartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnguardarpartidaActionPerformed(evt);
             }
         });
 
-        jTextPane1.setName("txtpnj2"); // NOI18N
-        jScrollPane1.setViewportView(jTextPane1);
+        txtpnj2.setName("txtpnj2"); // NOI18N
+        jScrollPane1.setViewportView(txtpnj2);
 
-        jTextPane2.setName("txtpnj1"); // NOI18N
-        jScrollPane2.setViewportView(jTextPane2);
+        txtpnj1.setName("txtpnj1"); // NOI18N
+        jScrollPane2.setViewportView(txtpnj1);
 
-        jPanel2.setName("pnlpvp2"); // NOI18N
+        pnlpvp2.setName("pnlpvp2"); // NOI18N
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText(" JUGADOR 1");
-        jLabel2.setName("lbljugador1"); // NOI18N
+        lbljugador1.setBackground(new java.awt.Color(255, 255, 255));
+        lbljugador1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbljugador1.setText(" JUGADOR 1");
+        lbljugador1.setName("lbljugador1"); // NOI18N
 
-        jRadioButton1.setText("PIEDRA");
-        jRadioButton1.setName("rdbtnpiedra1"); // NOI18N
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        rdbtnpiedra1.setText("PIEDRA");
+        rdbtnpiedra1.setName("rdbtnpiedra1"); // NOI18N
+        rdbtnpiedra1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rdbtnpiedra1ActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("PAPEL");
-        jRadioButton2.setName("rdbtnpapel1"); // NOI18N
+        rdbtnpapel1.setText("PAPEL");
+        rdbtnpapel1.setName("rdbtnpapel1"); // NOI18N
 
-        jRadioButton3.setText("TIEJRA");
-        jRadioButton3.setName("rdbtntijera1"); // NOI18N
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        rdbtntijera1.setText("TIEJRA");
+        rdbtntijera1.setName("rdbtntijera1"); // NOI18N
+        rdbtntijera1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                rdbtntijera1ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlpvp2Layout = new javax.swing.GroupLayout(pnlpvp2);
+        pnlpvp2.setLayout(pnlpvp2Layout);
+        pnlpvp2Layout.setHorizontalGroup(
+            pnlpvp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbljugador1, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
+            .addGroup(pnlpvp2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton3))
+                .addGroup(pnlpvp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rdbtnpiedra1)
+                    .addComponent(rdbtnpapel1)
+                    .addComponent(rdbtntijera1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel2)
+        pnlpvp2Layout.setVerticalGroup(
+            pnlpvp2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlpvp2Layout.createSequentialGroup()
+                .addComponent(lbljugador1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton1)
+                .addComponent(rdbtnpiedra1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(rdbtnpapel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton3)
+                .addComponent(rdbtntijera1)
                 .addGap(0, 17, Short.MAX_VALUE))
         );
 
-        jPanel3.setName("pnlpvp3"); // NOI18N
+        pnlpvp3.setName("pnlpvp3"); // NOI18N
 
-        jRadioButton6.setText("TIEJRA");
-        jRadioButton6.setName("rdbtntijera2"); // NOI18N
+        rdbtntiejra2.setText("TIEJRA");
+        rdbtntiejra2.setName("rdbtntijera2"); // NOI18N
 
-        jRadioButton5.setText("PAPEL");
-        jRadioButton5.setName("rdbtnpapel2"); // NOI18N
+        rdbtnpapel2.setText("PAPEL");
+        rdbtnpapel2.setName("rdbtnpapel2"); // NOI18N
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setText("JUGADOR 2");
-        jLabel3.setName("lbljugador2"); // NOI18N
+        lbljugador2.setBackground(new java.awt.Color(255, 255, 255));
+        lbljugador2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbljugador2.setText("JUGADOR 2");
+        lbljugador2.setName("lbljugador2"); // NOI18N
 
-        jRadioButton4.setText("PIEDRA");
-        jRadioButton4.setName("rdbtnpiedra2"); // NOI18N
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+        rdbtnpiedra2.setText("PIEDRA");
+        rdbtnpiedra2.setName("rdbtnpiedra2"); // NOI18N
+        rdbtnpiedra2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
+                rdbtnpiedra2ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jRadioButton4)
-            .addComponent(jRadioButton5)
-            .addComponent(jRadioButton6)
+        javax.swing.GroupLayout pnlpvp3Layout = new javax.swing.GroupLayout(pnlpvp3);
+        pnlpvp3.setLayout(pnlpvp3Layout);
+        pnlpvp3Layout.setHorizontalGroup(
+            pnlpvp3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lbljugador2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(rdbtnpiedra2)
+            .addComponent(rdbtnpapel2)
+            .addComponent(rdbtntiejra2)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel3)
+        pnlpvp3Layout.setVerticalGroup(
+            pnlpvp3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlpvp3Layout.createSequentialGroup()
+                .addComponent(lbljugador2)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton4)
+                .addComponent(rdbtnpiedra2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton5)
+                .addComponent(rdbtnpapel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton6)
+                .addComponent(rdbtntiejra2)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlpvp1Layout = new javax.swing.GroupLayout(pnlpvp1);
+        pnlpvp1.setLayout(pnlpvp1Layout);
+        pnlpvp1Layout.setHorizontalGroup(
+            pnlpvp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlpvp1Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(pnlpvp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlpvp1Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jToggleButton1)
+                        .addComponent(btnevaluarpartida)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(20, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlpvp1Layout.createSequentialGroup()
+                        .addGroup(pnlpvp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlpvp1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnguardarpartida))
+                            .addGroup(pnlpvp1Layout.createSequentialGroup()
+                                .addComponent(pnlpvp2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(pnlpvp3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(39, 39, 39))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlpvp1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblpersonavspersona, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlpvp1Layout.setVerticalGroup(
+            pnlpvp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlpvp1Layout.createSequentialGroup()
                 .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(lblpersonavspersona)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnguardarpartida, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnlpvp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlpvp2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlpvp3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addGroup(pnlpvp1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnevaluarpartida, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
@@ -229,36 +229,36 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlpvp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlpvp1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnguardarpartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarpartidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnguardarpartidaActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void btnevaluarpartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnevaluarpartidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_btnevaluarpartidaActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rdbtnpiedra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnpiedra1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rdbtnpiedra1ActionPerformed
 
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+    private void rdbtnpiedra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnpiedra2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
+    }//GEN-LAST:event_rdbtnpiedra2ActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void rdbtntijera1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtntijera1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_rdbtntijera1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,25 +296,25 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btnevaluarpartida;
+    private javax.swing.JButton btnguardarpartida;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JLabel lbljugador1;
+    private javax.swing.JLabel lbljugador2;
+    private javax.swing.JLabel lblpersonavspersona;
+    private javax.swing.JPanel pnlpvp1;
+    private javax.swing.JPanel pnlpvp2;
+    private javax.swing.JPanel pnlpvp3;
+    private javax.swing.JRadioButton rdbtnpapel1;
+    private javax.swing.JRadioButton rdbtnpapel2;
+    private javax.swing.JRadioButton rdbtnpiedra1;
+    private javax.swing.JRadioButton rdbtnpiedra2;
+    private javax.swing.JRadioButton rdbtntiejra2;
+    private javax.swing.JRadioButton rdbtntijera1;
+    private javax.swing.JTextPane txtpnj1;
+    private javax.swing.JTextPane txtpnj2;
     // End of variables declaration//GEN-END:variables
 }

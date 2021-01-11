@@ -28,86 +28,87 @@ public class PARTIDAS extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollBar1 = new javax.swing.JScrollBar();
+        pnltitulojuego = new javax.swing.JPanel();
+        lbljuegojkp = new javax.swing.JLabel();
+        btnnuevapartida = new javax.swing.JButton();
+        lblpartidasguardadas = new javax.swing.JLabel();
+        pnllistapartidas = new javax.swing.JPanel();
+        Scrlistapartidas = new javax.swing.JScrollBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setName("pnltitulojuego"); // NOI18N
+        pnltitulojuego.setName("pnltitulojuego"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("JUEGO - Jan Ken Po");
-        jLabel1.setName("lbljuegojkp"); // NOI18N
+        lbljuegojkp.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lbljuegojkp.setText("JUEGO - Jan Ken Po");
+        lbljuegojkp.setName("lbljuegojkp"); // NOI18N
+        lbljuegojkp.setOpaque(true);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setText("+ Nueva Partida");
-        jButton1.setName("btnnuevapartida"); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnnuevapartida.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnnuevapartida.setText("+ Nueva Partida");
+        btnnuevapartida.setName("btnnuevapartida"); // NOI18N
+        btnnuevapartida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnnuevapartidaActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 23)); // NOI18N
-        jLabel3.setText("            PARTIDAS GUARDADAS");
-        jLabel3.setName("lblpartidasguardadas"); // NOI18N
+        lblpartidasguardadas.setFont(new java.awt.Font("Tahoma", 0, 23)); // NOI18N
+        lblpartidasguardadas.setText("            PARTIDAS GUARDADAS");
+        lblpartidasguardadas.setName("lblpartidasguardadas"); // NOI18N
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setName("pnllistapartidas"); // NOI18N
+        pnllistapartidas.setBackground(new java.awt.Color(204, 204, 204));
+        pnllistapartidas.setName("pnllistapartidas"); // NOI18N
 
-        jScrollBar1.setName("scrlistapartidas"); // NOI18N
+        Scrlistapartidas.setName("scrlistapartidas"); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnllistapartidasLayout = new javax.swing.GroupLayout(pnllistapartidas);
+        pnllistapartidas.setLayout(pnllistapartidasLayout);
+        pnllistapartidasLayout.setHorizontalGroup(
+            pnllistapartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnllistapartidasLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Scrlistapartidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+        pnllistapartidasLayout.setVerticalGroup(
+            pnllistapartidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Scrlistapartidas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnltitulojuegoLayout = new javax.swing.GroupLayout(pnltitulojuego);
+        pnltitulojuego.setLayout(pnltitulojuegoLayout);
+        pnltitulojuegoLayout.setHorizontalGroup(
+            pnltitulojuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(pnltitulojuegoLayout.createSequentialGroup()
+                .addGroup(pnltitulojuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnltitulojuegoLayout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbljuegojkp, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltitulojuegoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
+                        .addComponent(btnnuevapartida)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(pnltitulojuegoLayout.createSequentialGroup()
                 .addGap(0, 28, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblpartidasguardadas, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
-            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnltitulojuegoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnllistapartidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(33, 33, 33))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnltitulojuegoLayout.setVerticalGroup(
+            pnltitulojuegoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnltitulojuegoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbljuegojkp)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnnuevapartida)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblpartidasguardadas, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnllistapartidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -115,19 +116,19 @@ public class PARTIDAS extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnltitulojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnltitulojuego, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnnuevapartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnuevapartidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnnuevapartidaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,11 +166,11 @@ public class PARTIDAS extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JScrollBar Scrlistapartidas;
+    private javax.swing.JButton btnnuevapartida;
+    private javax.swing.JLabel lbljuegojkp;
+    private javax.swing.JLabel lblpartidasguardadas;
+    private javax.swing.JPanel pnllistapartidas;
+    private javax.swing.JPanel pnltitulojuego;
     // End of variables declaration//GEN-END:variables
 }
