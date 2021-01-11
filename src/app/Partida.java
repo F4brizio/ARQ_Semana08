@@ -5,6 +5,22 @@ public class Partida {
     private IJugador[] oponentes = new IJugador[2];
     private int nPartidas = 0;
     private  int  id;
+    private String nombre;
+
+    public Partida(int id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    
 
     public void setOponentes(IJugador a, IJugador b) {
         oponentes[0] = a;
