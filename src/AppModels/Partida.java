@@ -4,7 +4,7 @@ public class Partida {
 
     private IJugador[] oponentes = new IJugador[2];
     private int nPartidas = 0;
-    private  Integer  id;
+    private  String  id;
     private String nombre;
 
     public int getnPartidas() {
@@ -102,11 +102,11 @@ public class Partida {
     }
 
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

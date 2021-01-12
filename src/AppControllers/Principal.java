@@ -28,7 +28,11 @@ public class Principal {
 
     public void loadGame(Partida partida) {
         this.partidasManager.setPartida(partida);
+        this.delReg(partida.getId());
         this.PrincipalView.close();
         new AppControllers.Partida();
+    }
+    public void delReg(String id) {
+        partidasManager.delReg(id);
     }
 }

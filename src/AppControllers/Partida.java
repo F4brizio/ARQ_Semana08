@@ -14,6 +14,7 @@ public class Partida {
         this.partidaView = new AppViews.PartidaConsole(this);
         this.partidaView.init();
         this.updatePoints();
+
     }
 
     public String evalularJugada(Elemento a, Elemento b) {
@@ -49,6 +50,7 @@ public class Partida {
     }
 
     public void SaveAndExit() {
+
         srv.guardar(partidasManager.getPartida());
         new AppControllers.Principal();
         this.partidaView.close();

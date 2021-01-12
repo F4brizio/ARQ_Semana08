@@ -39,7 +39,7 @@ public class PrincipalConsole {
                 //Load View Partida
                 ArrayList<Partida> list = this.controller.getListPartidas();
                 for (int i = 0; i < list.size(); i++) {
-                    System.out.println("("+list.get(i).getId()+") Nombre: "+list.get(i).getNombre());
+                    System.out.println("("+i+") Nombre: "+list.get(i).getNombre());
                 }
 
                 boolean opcLoopPart = true;
@@ -47,7 +47,7 @@ public class PrincipalConsole {
                     int opcPart;
                     System.out.println("Ingrese el ID de la partida:");
                     opcPart = teclado.nextInt();
-                    if (opcPart >= 0 && opcPart <= list.size()){
+                    if (opcPart >= 0 && opcPart < list.size()){
                         this.controller.loadGame(list.get(opcPart));
                     }else{
                         System.out.println("<- =============== ->");

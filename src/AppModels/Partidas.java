@@ -20,7 +20,9 @@ public class Partidas {
     }
 
     public static Partidas _this;
-    private Partidas() {}
+    private Partidas() {
+        this.ObtenerListaPartidas();
+    }
     public static Partidas getInstance(){
         if (_this == null){
             _this = new Partidas();
@@ -29,7 +31,7 @@ public class Partidas {
     }
 
     public Partida CrearPartida(String name){
-        int id = this.listaPartidas.size();
+        String id = UUID.randomUUID().toString();
         AppModels.Partida partida = new Partida();
         partida.setNombre(name);
         partida.setId(id);
@@ -38,18 +40,6 @@ public class Partidas {
         return partida;
     }
 
-    private boolean GuardarPartida(){
-        //Coneccion con presentador a la logica de negocio
-        return false;
-    }
-
-    private void ObtenerPartida(Integer id){
-        for (Partida p : listaPartidas) {
-            if (p.getId() == id) {
-                this.partida = p;
-            }
-        }
-    }
     public void cargarPartida(Partida p){
         this.listaPartidas.add(p);
     }
@@ -59,4 +49,10 @@ public class Partidas {
         return this.listaPartidas;
     }
 
+    public void delReg(String id) {
+        System.out.println("delReg: "+id);
+        srv.eliminarRegistro(id);
+        this.listaPartidas.clear();
+        srv.obtenerDatos(this);
+    }
 }

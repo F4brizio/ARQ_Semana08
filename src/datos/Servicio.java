@@ -2,9 +2,7 @@ package datos;
 
 import AppModels.*;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
@@ -30,6 +28,59 @@ public class Servicio {
         }
     }
 
+    public void eliminarRegistro(String id){
+        System.out.println("el id "+id);
+        ArrayList<String> newDatos = new ArrayList<>();
+        File archivo = new File(System.getProperty("user.dir")+"/partidas.txt");
+        Scanner s = null;
+        try {
+            s = new Scanner(archivo);
+            String[] datos = new String[7];
+            while (s.hasNextLine()) {
+                int i = 0;
+                String linea = s.nextLine();
+                StringTokenizer st = new StringTokenizer(linea, ",");
+                while (st.hasMoreTokens()) {
+                    datos[i] = st.nextToken();
+                    i++;
+                }
+                if ( ! (datos[0].equals(id)) ){
+                    newDatos.add(linea);
+                }
+            }
+            s.close();
+        } catch (Exception e) {
+            System.out.println("Error");
+            System.out.println("> "+ e.getMessage());
+        }
+        for (int i = 0; i < newDatos.size(); i++) {
+            System.out.println("line: "+newDatos.get(i));
+        }
+
+        try {
+            FileWriter fwOb = new FileWriter(System.getProperty("user.dir")+"/partidas.txt", false);
+            PrintWriter pwOb = new PrintWriter(fwOb, false);
+            pwOb.flush();
+            pwOb.close();
+            fwOb.close();
+        }catch (Exception e){  }
+        try {
+            BufferedWriter bw = Files.newBufferedWriter(Paths.get(System.getProperty("user.dir")+"/partidas.txt"), StandardOpenOption.APPEND);
+            bw.write("");
+            for (int i = 0; i < newDatos.size(); i++) {
+                System.out.println("add "+newDatos.get(i));
+                bw.write(newDatos.get(i));
+                bw.newLine();
+            }
+            bw.close();
+        } catch (Exception e) {
+            System.out.println("Error");
+            System.out.println("> "+ e.getMessage());
+        }
+
+
+    }
+
     public void obtenerDatos(Partidas c) {
         File archivo = new File(System.getProperty("user.dir")+"/partidas.txt");
         Scanner s = null;
@@ -44,7 +95,7 @@ public class Servicio {
                     datos[i] = st.nextToken();
                     i++;
                 }
-                int id = Integer.parseInt(datos[0]);
+                String id = datos[0];
                 Partida p = new Partida();
                 p.setId(id);
                 p.setNombre(datos[1]);
