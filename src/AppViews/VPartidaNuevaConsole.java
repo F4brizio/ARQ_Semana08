@@ -1,12 +1,15 @@
 package AppViews;
 
+import AppControllers.CPartidaNueva;
+import AppModels.MPartidaNueva;
+
 import java.util.Scanner;
 
-public class PartidaNuevaConsole {
-    AppControllers.PartidaNueva controller;
+public class VPartidaNuevaConsole {
+    MPartidaNueva model;
     private Scanner teclado = new Scanner(System.in);
-    public PartidaNuevaConsole(AppControllers.PartidaNueva controller) {
-        this.controller = controller;
+    public VPartidaNuevaConsole(MPartidaNueva model) {
+        this.model = model;
     }
     public void init(){
 
@@ -53,14 +56,15 @@ public class PartidaNuevaConsole {
                         System.out.println("<- =============== ->\n");
                     }
                 }
-                this.controller.create(namep, Modalidad);
-
+                this.model.create(namep, Modalidad);
+                this.close();
             }else if (opc == 2){
                 opcLoop = false;
                 System.out.println("<- =============== ->");
                 System.out.println("<- Cancelar  ->");
                 System.out.println("<- =============== ->\n");
-                this.controller.cancel();
+                this.model.cancel();
+                this.close();
             }else{
                 System.out.println("<- =============== ->");
                 System.out.println("<- Opcion Invalida ->");

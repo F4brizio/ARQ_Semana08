@@ -1,15 +1,17 @@
 package AppViews;
 
+import AppControllers.CPrincipal;
+import AppModels.MPrincipal;
 import AppModels.Partida;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PrincipalConsole {
-    private AppControllers.Principal controller;
+public class VPrincipalConsole {
+    private MPrincipal model;
     private Scanner teclado = new Scanner(System.in);
-    public PrincipalConsole(AppControllers.Principal controller) {
-        this.controller = controller;
+    public VPrincipalConsole(MPrincipal controller) {
+        this.model = controller;
     }
     public void init(){
         System.out.println("=====> Jan Ken Po <=====");
@@ -28,13 +30,14 @@ public class PrincipalConsole {
                 System.out.println("<-  Nueva Partida  ->");
                 System.out.println("<- =============== ->\n");
                 opcLoop = false;
-                this.controller.newGame();
+                this.model.newGame();
+                this.close();
             }else if (opc == 2){
                 opcLoop = false;
                 System.out.println("<- =============== ->");
                 System.out.println("<- Cargar Partida  ->");
                 System.out.println("<- =============== ->\n");
-                ArrayList<Partida> list = this.controller.getListPartidas();
+                ArrayList<Partida> list = this.model.getListPartidas();
                 for (int i = 0; i < list.size(); i++) {
                     System.out.println("("+i+") Nombre: "+list.get(i).getNombre());
                 }
@@ -45,7 +48,8 @@ public class PrincipalConsole {
                     System.out.println("Ingrese el ID de la partida:");
                     opcPart = teclado.nextInt();
                     if (opcPart >= 0 && opcPart < list.size()){
-                        this.controller.loadGame(list.get(opcPart));
+                        this.model.loadGame(list.get(opcPart));
+                        this.close();
                     }else{
                         System.out.println("<- =============== ->");
                         System.out.println("<- Opcion Invalida ->");
