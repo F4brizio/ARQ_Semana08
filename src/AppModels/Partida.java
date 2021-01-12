@@ -7,6 +7,14 @@ public class Partida {
     private  Integer  id;
     private String nombre;
 
+    public int getnPartidas() {
+        return nPartidas;
+    }
+
+    public void setnPartidas(int nPartidas) {
+        this.nPartidas = nPartidas;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -31,27 +39,28 @@ public class Partida {
     - aumenta nPartida
      */
     public void EvaluarJugada(){
-     if (oponentes[0].getJugada().equals("PIEDRA") && oponentes[1].equals("PAPEL")){
-         // oponente [1] gana
+    System.out.println(oponentes[0].getJugada() + " - " + oponentes[1].getJugada());
+     if ((oponentes[0].getJugada() == Elemento.PIEDRA) && (oponentes[1].getJugada() == Elemento.PAPEL)){
+         System.out.println(" oponente [1] gana ");
          oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
-     }else if (oponentes[0].getJugada().equals("PAPEL") && oponentes[1].equals("PIDRA")){
-         // oponente [0] gana
+     }else if (oponentes[0].getJugada() == Elemento.PAPEL && oponentes[1].getJugada() == Elemento.PIEDRA){
+         System.out.println(" oponente [0] gana ");
          oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
      }
 
-        if (oponentes[0].getJugada().equals("PAPEL") && oponentes[1].equals("TIJERA")){
-            // oponente [1] gana
+        if (oponentes[0].getJugada() == Elemento.PAPEL && oponentes[1].getJugada() == Elemento.TIJERA){
+            System.out.println(" oponente [1] gana ");
             oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
-        }else if (oponentes[0].getJugada().equals("TIJERA") && oponentes[1].equals("PAPEL")){
-            // oponente [0] gana
+        }else if (oponentes[0].getJugada() == Elemento.TIJERA && oponentes[1].getJugada() == Elemento.PAPEL){
+            System.out.println(" oponente [0] gana ");
             oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
         }
 
-        if (oponentes[0].getJugada().equals("PIEDRA") && oponentes[1].equals("TIJERA")){
-            // oponente [1] gana
+        if (oponentes[0].getJugada() == Elemento.PIEDRA && oponentes[1].getJugada() == Elemento.TIJERA){
+            System.out.println(" oponente [1] gana ");
             oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
-        }else if (oponentes[0].getJugada().equals("TIJERA") && oponentes[1].equals("PIEDRA")){
-            // oponente [0] gana
+        }else if (oponentes[0].getJugada() == Elemento.TIJERA && oponentes[1].getJugada() == Elemento.PIEDRA){
+            System.out.println(" oponente [0] gana ");
             oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
         }
          this.nPartidas++;
@@ -61,21 +70,18 @@ public class Partida {
     Determina si hay ganador
     Evalua nPartidas
      */
-    public void EvalularPartidad(){
-     if (this.nPartidas == 5){
-                 if(oponentes[0].getPuntaje() == oponentes[1].getPuntaje()){
-                     // empate
-                 }else if (oponentes[0].getPuntaje() > oponentes[1].getPuntaje()){
-                     // oponente[0] gana
-                 }else {
-                     // oponente[1] gana
-                 }
-
-
-     }
-
-
-
+    public boolean EvalularPartidad(){
+        if (this.nPartidas == 5){
+            if(oponentes[0].getPuntaje() == oponentes[1].getPuntaje()){
+             System.out.println("empate");
+            }else if (oponentes[0].getPuntaje() > oponentes[1].getPuntaje()){
+             System.out.println("oponente[0] gana");
+            }else {
+             System.out.println("oponente[1] gana");
+            }
+            return true;
+        }
+        return false;
     }
 
 

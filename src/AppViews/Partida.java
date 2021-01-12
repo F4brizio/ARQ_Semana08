@@ -6,6 +6,8 @@ package AppViews;
  * and open the template in the editor.
  */
 
+import AppModels.Elemento;
+
 /**
  *
  * @author luisp
@@ -15,8 +17,10 @@ public class Partida extends javax.swing.JFrame {
     /**
      * Creates new form ModoDeJuegoPVP
      */
-    public Partida() {
+    AppControllers.Partida controller;
+    public Partida(AppControllers.Partida controller) {
         initComponents();
+        this.controller = controller;
     }
 
     /**
@@ -245,7 +249,14 @@ public class Partida extends javax.swing.JFrame {
     }//GEN-LAST:event_btnguardarpartidaActionPerformed
 
     private void btnevaluarpartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnevaluarpartidaActionPerformed
-        // TODO add your handling code here:
+
+        Elemento a = this.getJugadaA();
+        Elemento b = this.getJugadaB();
+        if (a != null && b != null){
+            this.controller.evalularJugada(a, b);
+        }
+
+
     }//GEN-LAST:event_btnevaluarpartidaActionPerformed
 
     private void rdbtnpiedra1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnpiedra1ActionPerformed
@@ -288,16 +299,25 @@ public class Partida extends javax.swing.JFrame {
         this.txtpnj2.setText(b + " puntos");
     }
 
-    public void getJugadaA(){
-        int v=0 ;
+    public Elemento getJugadaA(){
         if(rdbtnpapel1.isSelected()){
-            v = 1;
+            return Elemento.PAPEL;
         }else if(rdbtnpiedra1.isSelected()){
-            v = 2;
+            return Elemento.PIEDRA;
         }else if(rdbtntijera1.isSelected()){
-            v = 2;
+            return Elemento.TIJERA;
         }
+        return null;
     }
-
+    public Elemento getJugadaB(){
+        if(rdbtnpapel2.isSelected()){
+            return Elemento.PAPEL;
+        }else if(rdbtnpiedra2.isSelected()){
+            return Elemento.PIEDRA;
+        }else if(rdbtntiejra2.isSelected()){
+            return Elemento.TIJERA;
+        }
+        return null;
+    }
 
 }

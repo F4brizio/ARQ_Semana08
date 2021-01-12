@@ -1,4 +1,5 @@
 package AppModels;
 
-public class Elemento {
+public enum Elemento {
+    PIEDRA,PAPEL,TIJERA;
 }
