@@ -1,16 +1,11 @@
-package app;
+package AppModels;
 
 public class Partida {
 
     private IJugador[] oponentes = new IJugador[2];
     private int nPartidas = 0;
-    private  int  id;
+    private  Integer  id;
     private String nombre;
-
-    public Partida(int id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
-    }
 
     public String getNombre() {
         return nombre;
@@ -19,14 +14,16 @@ public class Partida {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
 
     public void setOponentes(IJugador a, IJugador b) {
         oponentes[0] = a;
         oponentes[1] = b;
-
     }
+
+    public IJugador[] getOponentes(){
+        return this.oponentes;
+    }
+
     /*
     - Obtiene la jugada de los dos jugadores
     - crea logica de quien gana a quien
@@ -82,11 +79,11 @@ public class Partida {
     }
 
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -1,4 +1,4 @@
-package app;
+package AppModels;
 
 public class Elemento {
 }

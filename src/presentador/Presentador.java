@@ -1,8 +1,8 @@
 
 package presentador;
 
-import app.LogicaNegocio;
-import app.Partida;
+import AppModels.LogicaNegocio;
+import AppModels.Partida;
 
 public class Presentador {
     private LogicaNegocio logic = new LogicaNegocio();

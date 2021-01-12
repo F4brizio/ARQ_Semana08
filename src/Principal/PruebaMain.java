@@ -1,12 +1,11 @@
 package Principal;
 
-import app.Partida;
-import app.Partidas;
-import java.util.ArrayList;
+import AppModels.Partida;
+import AppModels.Partidas;
 import presentador.Presentador;
 
 public class PruebaMain {
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         Partidas lista = new Partidas();
         Presentador p = new Presentador();
         Partida p1 =lista.CrearPartida("primeraPartida");
@@ -17,6 +16,6 @@ public class PruebaMain {
         p.guardar(p3);
         Partida p4 =lista.CrearPartida("cuartaPartida");
         p.guardar(p4);
-    }
+    }*/
     
 }

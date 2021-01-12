@@ -1,4 +1,4 @@
-package VistasJuego;
+package AppViews;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -6,16 +6,19 @@ package VistasJuego;
  * and open the template in the editor.
  */
 
+import javax.swing.*;
+
 /**
  *
  * @author luisp
  */
-public class CrearPartida extends javax.swing.JFrame {
-
+public class PartidaNueva extends javax.swing.JFrame {
+    AppControllers.PartidaNueva controller;
     /**
      * Creates new form CrearPartida
      */
-    public CrearPartida() {
+    public PartidaNueva(AppControllers.PartidaNueva controller) {
+        this.controller = controller;
         initComponents();
     }
 
@@ -28,6 +31,7 @@ public class CrearPartida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         pnlcrearpartida = new javax.swing.JPanel();
         lblcrearpartida = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -35,6 +39,8 @@ public class CrearPartida extends javax.swing.JFrame {
         rdbtnpvp = new javax.swing.JRadioButton();
         rdbtnpvm = new javax.swing.JRadioButton();
         lblelegiroponente = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
+        btnCreate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +62,8 @@ public class CrearPartida extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rdbtnpvp);
+        rdbtnpvp.setSelected(true);
         rdbtnpvp.setText("PERSONA VS PERSONA");
         rdbtnpvp.setName("rdbtnpvp"); // NOI18N
         rdbtnpvp.addActionListener(new java.awt.event.ActionListener() {
@@ -64,12 +72,27 @@ public class CrearPartida extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rdbtnpvm);
         rdbtnpvm.setText("PERSONA VS MAQUINA");
         rdbtnpvm.setName("rdbtnpvm"); // NOI18N
 
         lblelegiroponente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         lblelegiroponente.setText("ELEGIR OPONENTE:");
         lblelegiroponente.setName("lblelegiroponente"); // NOI18N
+
+        btnCancel.setText("Cancelar");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
+
+        btnCreate.setText("Crear");
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlcrearpartidaLayout = new javax.swing.GroupLayout(pnlcrearpartida);
         pnlcrearpartida.setLayout(pnlcrearpartidaLayout);
@@ -81,15 +104,19 @@ public class CrearPartida extends javax.swing.JFrame {
                     .addComponent(lblcrearpartida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlcrearpartidaLayout.createSequentialGroup()
                         .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblelegiroponente)
                             .addGroup(pnlcrearpartidaLayout.createSequentialGroup()
-                                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(rdbtnpvp))
-                                .addGap(18, 18, 18)
                                 .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(rdbtnpvm)))
-                            .addComponent(lblelegiroponente))
+                                    .addComponent(btnCancel)
+                                    .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel2)
+                                        .addComponent(rdbtnpvp)))
+                                .addGap(18, 18, 18)
+                                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(rdbtnpvm))
+                                    .addComponent(btnCreate))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -108,7 +135,11 @@ public class CrearPartida extends javax.swing.JFrame {
                 .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rdbtnpvp)
                     .addComponent(rdbtnpvm))
-                .addGap(55, 55, 55))
+                .addGap(18, 18, 18)
+                .addGroup(pnlcrearpartidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancel)
+                    .addComponent(btnCreate))
+                .addGap(14, 14, 14))
         );
 
         txtnombre.getAccessibleContext().setAccessibleName("");
@@ -132,46 +163,23 @@ public class CrearPartida extends javax.swing.JFrame {
     }//GEN-LAST:event_txtnombreActionPerformed
 
     private void rdbtnpvpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnpvpActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_rdbtnpvpActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CrearPartida.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        this.controller.cancel();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CrearPartida().setVisible(true);
-            }
-        });
-    }
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        this.controller.create(this.txtnombre.getText(), buttonGroup1.getSelection().getActionCommand());
+    }//GEN-LAST:event_btnCreateActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnCreate;
+    private javax.swing.ButtonGroup buttonGroup1;
+    public javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblcrearpartida;
     private javax.swing.JLabel lblelegiroponente;
     private javax.swing.JPanel pnlcrearpartida;

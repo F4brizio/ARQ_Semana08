@@ -1,14 +1,37 @@
-package app;
+package AppModels;
+import com.sun.xml.internal.ws.wsdl.writer.document.Part;
+
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Partidas {
     private final ArrayList<Partida>listaPartidas =new ArrayList();
     private Partida partida;
 
-    public Partida CrearPartida(String nombre){
+    public Partida getPartida() {
+        return partida;
+    }
+
+    public void setPartida(Partida partida) {
+        this.partida = partida;
+    }
+
+    public static Partidas _this;
+    private Partidas() {}
+    public static Partidas getInstance(){
+        if (_this == null){
+            _this = new Partidas();
+        }
+        return _this;
+    }
+
+    public Partida CrearPartida(String name){
         int id = this.listaPartidas.size();
-        this.partida = new Partida(id,nombre);
+        AppModels.Partida partida = new Partida();
+        partida.setNombre(name);
+        partida.setId(id);
         this.listaPartidas.add(partida);
+        this.partida = partida;
         return partida;
     }
 
@@ -26,7 +49,7 @@ public class Partidas {
         }
     }
 
-    private Partida ObtenerPartida(int id){
+    private Partida ObtenerPartida(Integer id){
         for (Partida p : listaPartidas) {
             if (p.getId()== id) {
                 return p;

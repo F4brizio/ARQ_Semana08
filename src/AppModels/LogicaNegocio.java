@@ -1,4 +1,6 @@
-package app;
+package AppModels;
+import AppModels.Partida;
+import AppModels.Partidas;
 import datos.Servicio;
 
 public class LogicaNegocio {

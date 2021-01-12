@@ -1,4 +1,4 @@
-package app;
+package AppModels;
 
 public interface IJugador {
 

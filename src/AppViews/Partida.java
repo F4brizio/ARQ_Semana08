@@ -1,4 +1,4 @@
-package VistasJuego;
+package AppViews;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,12 +10,12 @@ package VistasJuego;
  *
  * @author luisp
  */
-public class ModoDeJuegoPVP extends javax.swing.JFrame {
+public class Partida extends javax.swing.JFrame {
 
     /**
      * Creates new form ModoDeJuegoPVP
      */
-    public ModoDeJuegoPVP() {
+    public Partida() {
         initComponents();
     }
 
@@ -135,10 +135,10 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
 
         pnlpvp3.setName("pnlpvp3"); // NOI18N
 
-        rdbtntiejra2.setText("TIEJRA");
+        rdbtntiejra2.setText("-TIEJRA");
         rdbtntiejra2.setName("rdbtntijera2"); // NOI18N
 
-        rdbtnpapel2.setText("PAPEL");
+        rdbtnpapel2.setText("-PAPEL");
         rdbtnpapel2.setName("rdbtnpapel2"); // NOI18N
 
         lbljugador2.setBackground(new java.awt.Color(255, 255, 255));
@@ -146,7 +146,7 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
         lbljugador2.setText("JUGADOR 2");
         lbljugador2.setName("lbljugador2"); // NOI18N
 
-        rdbtnpiedra2.setText("PIEDRA");
+        rdbtnpiedra2.setText("-PIEDRA");
         rdbtnpiedra2.setName("rdbtnpiedra2"); // NOI18N
         rdbtnpiedra2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,41 +260,6 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdbtntijera1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ModoDeJuegoPVP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ModoDeJuegoPVP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ModoDeJuegoPVP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ModoDeJuegoPVP.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ModoDeJuegoPVP().setVisible(true);
-            }
-        });
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btnevaluarpartida;
     private javax.swing.JButton btnguardarpartida;
@@ -304,7 +269,7 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lbljugador1;
     private javax.swing.JLabel lbljugador2;
-    private javax.swing.JLabel lblpersonavspersona;
+    public javax.swing.JLabel lblpersonavspersona;
     private javax.swing.JPanel pnlpvp1;
     private javax.swing.JPanel pnlpvp2;
     private javax.swing.JPanel pnlpvp3;
@@ -317,4 +282,22 @@ public class ModoDeJuegoPVP extends javax.swing.JFrame {
     private javax.swing.JTextPane txtpnj1;
     private javax.swing.JTextPane txtpnj2;
     // End of variables declaration//GEN-END:variables
+
+    public void setPuntajes(int a, int b){
+        this.txtpnj1.setText(a + " puntos");
+        this.txtpnj2.setText(b + " puntos");
+    }
+
+    public void getJugadaA(){
+        int v=0 ;
+        if(rdbtnpapel1.isSelected()){
+            v = 1;
+        }else if(rdbtnpiedra1.isSelected()){
+            v = 2;
+        }else if(rdbtntijera1.isSelected()){
+            v = 2;
+        }
+    }
+
+
 }
