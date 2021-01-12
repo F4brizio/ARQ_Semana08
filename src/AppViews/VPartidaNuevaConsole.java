@@ -1,11 +1,13 @@
 package AppViews;
 
+import AppControllers.CPartidaNueva;
+
 import java.util.Scanner;
 
-public class PartidaNuevaConsole {
-    AppControllers.PartidaNueva controller;
+public class VPartidaNuevaConsole {
+    CPartidaNueva controller;
     private Scanner teclado = new Scanner(System.in);
-    public PartidaNuevaConsole(AppControllers.PartidaNueva controller) {
+    public VPartidaNuevaConsole(CPartidaNueva controller) {
         this.controller = controller;
     }
     public void init(){

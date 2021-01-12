@@ -3,15 +3,15 @@ package AppControllers;
 import AppModels.Elemento;
 import AppModels.IJugador;
 import AppModels.LogicaNegocio;
-import datos.Servicio;
+import AppViews.VPartidaConsole;
 
-public class Partida {
+public class CPartida {
     LogicaNegocio ldn = new LogicaNegocio();
 
-    AppViews.PartidaConsole partidaView;
+    VPartidaConsole partidaView;
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
-    public Partida() {
-        this.partidaView = new AppViews.PartidaConsole(this);
+    public CPartida() {
+        this.partidaView = new VPartidaConsole(this);
         this.partidaView.init();
         this.updatePoints();
     }
@@ -31,7 +31,7 @@ public class Partida {
         String e = partidasManager.getPartida().EvalularPartidad();
         if (e != null){
             this.partidaView.close();
-            new AppControllers.Principal();
+            new CPrincipal();
         }
     }
 
@@ -50,7 +50,7 @@ public class Partida {
 
     public void SaveAndExit() {
         ldn.guardarPartida(partidasManager.getPartida());
-        new AppControllers.Principal();
+        new CPrincipal();
         this.partidaView.close();
     }
 }

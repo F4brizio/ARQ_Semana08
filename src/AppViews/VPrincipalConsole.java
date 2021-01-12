@@ -1,14 +1,15 @@
 package AppViews;
 
+import AppControllers.CPrincipal;
 import AppModels.Partida;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PrincipalConsole {
-    private AppControllers.Principal controller;
+public class VPrincipalConsole {
+    private CPrincipal controller;
     private Scanner teclado = new Scanner(System.in);
-    public PrincipalConsole(AppControllers.Principal controller) {
+    public VPrincipalConsole(CPrincipal controller) {
         this.controller = controller;
     }
     public void init(){

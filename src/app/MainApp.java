@@ -1,8 +1,8 @@
 package app;
 
-import AppControllers.Principal;
+import AppControllers.CPrincipal;
 public class MainApp {
     public static void main(String[] args){
-        AppControllers.Principal p = new Principal();
+        CPrincipal p = new CPrincipal();
     }
 }

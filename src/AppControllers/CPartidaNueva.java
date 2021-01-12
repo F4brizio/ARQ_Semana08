@@ -4,17 +4,18 @@ import AppModels.IJugador;
 import AppModels.Maquina;
 import AppModels.Partida;
 import AppModels.Persona;
+import AppViews.VPartidaNuevaConsole;
 
-public class PartidaNueva {
-    AppViews.PartidaNuevaConsole partidaNuevaView;
+public class CPartidaNueva {
+    VPartidaNuevaConsole partidaNuevaView;
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
-    public PartidaNueva() {
-        this.partidaNuevaView = new AppViews.PartidaNuevaConsole(this);
+    public CPartidaNueva() {
+        this.partidaNuevaView = new VPartidaNuevaConsole(this);
         this.partidaNuevaView.init();
     }
     public void cancel(){
         this.partidaNuevaView.close();
-        new Principal();
+        new CPrincipal();
     }
     public void create(String name, String type){
 
@@ -32,7 +33,7 @@ public class PartidaNueva {
         }
         partida.setOponentes(jugadorA, jugadorB);
         this.partidaNuevaView.close();
-        new AppControllers.Partida();
+        new CPartida();
 
     }
 }
