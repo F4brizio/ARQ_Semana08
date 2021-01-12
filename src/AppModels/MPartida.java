@@ -4,7 +4,6 @@ import AppControllers.CPrincipal;
 import AppViews.VPartidaConsole;
 
 public class MPartida {
-    LogicaNegocio ldn = new LogicaNegocio();
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
     public String evalularJugada(VPartidaConsole vPartidaConsole, Elemento a, Elemento b) {
         partidasManager.getPartida().getOponentes()[0].JugadaTurno(a);
@@ -39,7 +38,7 @@ public class MPartida {
     }
 
     public void SaveAndExit(VPartidaConsole vPartidaConsole) {
-        ldn.guardarPartida(partidasManager.getPartida());
+        partidasManager.guardarPartida();
         new CPrincipal();
         vPartidaConsole.close();
     }

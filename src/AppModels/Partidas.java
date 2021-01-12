@@ -53,4 +53,8 @@ public class Partidas {
         this.listaPartidas.clear();
         ldn.obtenerDatos(this);
     }
+
+    public void guardarPartida() {
+        ldn.guardarPartida(this.getPartida());
+    }
 }
