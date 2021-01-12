@@ -34,9 +34,6 @@ public class PrincipalConsole {
                 System.out.println("<- =============== ->");
                 System.out.println("<- Cargar Partida  ->");
                 System.out.println("<- =============== ->\n");
-                //get List Partidas Guardadas
-                //set ID Load Partida
-                //Load View Partida
                 ArrayList<Partida> list = this.controller.getListPartidas();
                 for (int i = 0; i < list.size(); i++) {
                     System.out.println("("+i+") Nombre: "+list.get(i).getNombre());

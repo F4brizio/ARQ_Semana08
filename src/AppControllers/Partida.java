@@ -2,19 +2,18 @@ package AppControllers;
 
 import AppModels.Elemento;
 import AppModels.IJugador;
+import AppModels.LogicaNegocio;
 import datos.Servicio;
 
 public class Partida {
-    Servicio srv = new Servicio();
+    LogicaNegocio ldn = new LogicaNegocio();
 
-    //AppViews.Partida partidaView;
     AppViews.PartidaConsole partidaView;
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
     public Partida() {
         this.partidaView = new AppViews.PartidaConsole(this);
         this.partidaView.init();
         this.updatePoints();
-
     }
 
     public String evalularJugada(Elemento a, Elemento b) {
@@ -50,8 +49,7 @@ public class Partida {
     }
 
     public void SaveAndExit() {
-
-        srv.guardar(partidasManager.getPartida());
+        ldn.guardarPartida(partidasManager.getPartida());
         new AppControllers.Principal();
         this.partidaView.close();
     }

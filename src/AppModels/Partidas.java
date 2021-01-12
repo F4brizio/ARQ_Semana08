@@ -1,12 +1,10 @@
 package AppModels;
-import com.sun.xml.internal.ws.wsdl.writer.document.Part;
-import datos.Servicio;
 
 import java.util.ArrayList;
 import java.util.UUID;
 
 public class Partidas {
-    Servicio srv = new Servicio();
+    LogicaNegocio ldn = new LogicaNegocio();
 
     private final ArrayList<Partida>listaPartidas = new ArrayList();
     private Partida partida;
@@ -45,14 +43,14 @@ public class Partidas {
     }
     public ArrayList ObtenerListaPartidas(){
         this.listaPartidas.clear();
-        srv.obtenerDatos(this);
+        ldn.obtenerDatos(this);
         return this.listaPartidas;
     }
 
     public void delReg(String id) {
         System.out.println("delReg: "+id);
-        srv.eliminarRegistro(id);
+        ldn.eliminarRegistro(id);
         this.listaPartidas.clear();
-        srv.obtenerDatos(this);
+        ldn.obtenerDatos(this);
     }
 }

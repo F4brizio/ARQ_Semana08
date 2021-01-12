@@ -4,16 +4,11 @@ import AppModels.IJugador;
 import AppModels.Maquina;
 import AppModels.Partida;
 import AppModels.Persona;
-import com.sun.xml.internal.ws.wsdl.writer.document.Part;
-
-import java.util.UUID;
 
 public class PartidaNueva {
-    //AppViews.PartidaNueva partidaNuevaView;
     AppViews.PartidaNuevaConsole partidaNuevaView;
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
     public PartidaNueva() {
-        //this.partidaNuevaView = new AppViews.PartidaNueva(this);
         this.partidaNuevaView = new AppViews.PartidaNuevaConsole(this);
         this.partidaNuevaView.init();
     }

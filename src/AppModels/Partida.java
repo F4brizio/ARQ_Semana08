@@ -32,12 +32,6 @@ public class Partida {
         return this.oponentes;
     }
 
-    /*
-    - Obtiene la jugada de los dos jugadores
-    - crea logica de quien gana a quien
-    - Aumenta el puntaje al jugadoor.
-    - aumenta nPartida
-     */
     public String EvaluarJugada(){
 
         String r = null;
@@ -83,11 +77,7 @@ public class Partida {
          this.nPartidas++;
          return r;
     }
-    /*
-    Analiza puntaje de oponentes
-    Determina si hay ganador
-    Evalua nPartidas
-     */
+
     public String EvalularPartidad(){
         if (this.nPartidas == 5){
             if(oponentes[0].getPuntaje() == oponentes[1].getPuntaje()){

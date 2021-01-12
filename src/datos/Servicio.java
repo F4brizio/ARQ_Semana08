@@ -1,7 +1,6 @@
 package datos;
 
 import AppModels.*;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -9,7 +8,6 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-import javax.xml.bind.ParseConversionEvent;
 
 public class Servicio {
 
@@ -19,7 +17,6 @@ public class Servicio {
             IJugador opA =p.getOponentes()[0];
             IJugador opB =p.getOponentes()[1];
             String line= String.valueOf(p.getId()) + "," + p.getNombre()+","+String.valueOf(p.getnPartidas())+","+String.valueOf(opA.getTipo())+","+String.valueOf(opA.getPuntaje())+","+String.valueOf(opB.getTipo())+","+String.valueOf(opB.getPuntaje());
-            System.out.println(line);
             bw.write(line);
             bw.newLine();
             bw.close();
@@ -53,9 +50,6 @@ public class Servicio {
             System.out.println("Error");
             System.out.println("> "+ e.getMessage());
         }
-        for (int i = 0; i < newDatos.size(); i++) {
-            System.out.println("line: "+newDatos.get(i));
-        }
 
         try {
             FileWriter fwOb = new FileWriter(System.getProperty("user.dir")+"/partidas.txt", false);
@@ -68,7 +62,6 @@ public class Servicio {
             BufferedWriter bw = Files.newBufferedWriter(Paths.get(System.getProperty("user.dir")+"/partidas.txt"), StandardOpenOption.APPEND);
             bw.write("");
             for (int i = 0; i < newDatos.size(); i++) {
-                System.out.println("add "+newDatos.get(i));
                 bw.write(newDatos.get(i));
                 bw.newLine();
             }

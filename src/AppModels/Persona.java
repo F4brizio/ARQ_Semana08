@@ -1,8 +1,5 @@
 package AppModels;
 
-import AppModels.Elemento;
-import AppModels.IJugador;
-
 public class Persona implements IJugador {
     Elemento JugadaActual = null;
     int puntaje = 0;
