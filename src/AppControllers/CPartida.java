@@ -5,12 +5,12 @@ import AppModels.IJugador;
 import AppModels.LogicaNegocio;
 import datos.Servicio;
 
-public class Partida {
+public class CPartida {
     LogicaNegocio ldn = new LogicaNegocio();
 
     AppViews.PartidaConsole partidaView;
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
-    public Partida() {
+    public CPartida() {
         this.partidaView = new AppViews.PartidaConsole(this);
         this.partidaView.init();
         this.updatePoints();

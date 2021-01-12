@@ -23,7 +23,7 @@ public class Principal {
         this.partidasManager.setPartida(partida);
         this.delReg(partida.getId());
         this.PrincipalView.close();
-        new AppControllers.Partida();
+        new CPartida();
     }
     public void delReg(String id) {
         partidasManager.delReg(id);

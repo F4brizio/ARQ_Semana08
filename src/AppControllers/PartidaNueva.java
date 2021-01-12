@@ -32,7 +32,7 @@ public class PartidaNueva {
         }
         partida.setOponentes(jugadorA, jugadorB);
         this.partidaNuevaView.close();
-        new AppControllers.Partida();
+        new CPartida();
 
     }
 }
