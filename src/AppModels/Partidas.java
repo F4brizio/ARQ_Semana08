@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Partidas {
-    private final ArrayList<Partida>listaPartidas =new ArrayList();
+    private final ArrayList<Partida>listaPartidas = new ArrayList();
     private Partida partida;
 
     public Partida getPartida() {
@@ -40,22 +40,12 @@ public class Partidas {
         return false;
     }
 
-    private boolean CancelarPartida(){
-        try{
-            this.partida = null;
-            return true;
-        }catch(Exception e){        
-            return false;
-        }
-    }
-
-    private Partida ObtenerPartida(Integer id){
+    private void ObtenerPartida(Integer id){
         for (Partida p : listaPartidas) {
-            if (p.getId()== id) {
-                return p;
+            if (p.getId() == id) {
+                this.partida = p;
             }
         }
-        return null;
     }
     public ArrayList ObtenerListaPartidas(){
         return this.listaPartidas;

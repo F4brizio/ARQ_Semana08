@@ -12,7 +12,6 @@ public class Servicio {
     public void guardar(Partida p) {
         try {
             BufferedWriter bw = Files.newBufferedWriter(Paths.get("D:/files/partidas.txt"), StandardOpenOption.APPEND);
-            
             String line= String.valueOf(p.getId()) + "," + p.getNombre();
             bw.write(line);
             bw.newLine();
