@@ -24,8 +24,8 @@ public class Partida {
     }
 
     public void setOponentes(IJugador a, IJugador b) {
-        oponentes[0] = a;
-        oponentes[1] = b;
+        this.oponentes[0] = a;
+        this.oponentes[1] = b;
     }
 
     public IJugador[] getOponentes(){
@@ -38,50 +38,67 @@ public class Partida {
     - Aumenta el puntaje al jugadoor.
     - aumenta nPartida
      */
-    public void EvaluarJugada(){
-    System.out.println(oponentes[0].getJugada() + " - " + oponentes[1].getJugada());
-     if ((oponentes[0].getJugada() == Elemento.PIEDRA) && (oponentes[1].getJugada() == Elemento.PAPEL)){
-         System.out.println(" oponente [1] gana ");
-         oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
-     }else if (oponentes[0].getJugada() == Elemento.PAPEL && oponentes[1].getJugada() == Elemento.PIEDRA){
-         System.out.println(" oponente [0] gana ");
-         oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
-     }
+    public String EvaluarJugada(){
 
-        if (oponentes[0].getJugada() == Elemento.PAPEL && oponentes[1].getJugada() == Elemento.TIJERA){
-            System.out.println(" oponente [1] gana ");
-            oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
-        }else if (oponentes[0].getJugada() == Elemento.TIJERA && oponentes[1].getJugada() == Elemento.PAPEL){
-            System.out.println(" oponente [0] gana ");
+        String r = null;
+
+    System.out.println(getOponentes()[0].getJugada() + " vs " + getOponentes()[1].getJugada());
+
+    Elemento j1 = getOponentes()[0].getJugada();
+    Elemento j2 = getOponentes()[1].getJugada();
+
+    Elemento pi = Elemento.PIEDRA;
+    Elemento pa = Elemento.PAPEL;
+    Elemento ti = Elemento.TIJERA;
+
+        if (j1 == pi && j2 == ti){
+            r = ("Oponente 1 Gana Jugada");
             oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
         }
-
-        if (oponentes[0].getJugada() == Elemento.PIEDRA && oponentes[1].getJugada() == Elemento.TIJERA){
-            System.out.println(" oponente [1] gana ");
-            oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
-        }else if (oponentes[0].getJugada() == Elemento.TIJERA && oponentes[1].getJugada() == Elemento.PIEDRA){
-            System.out.println(" oponente [0] gana ");
+        if (j1 == ti && j2 == pa){
+            r = ("Oponente 1 Gana Jugada");
             oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
         }
+        if (j1 == pa && j2 == pi){
+            r = ("Oponente 1 Gana Jugada");
+            oponentes[0].setPuntaje(oponentes[0].getPuntaje()+1);
+        }
+        if (j2 == pi && j1 == ti){
+            r = ("Oponente 2 Gana Jugada");
+            oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
+        }
+        if (j2 == ti && j1 == pa){
+            r = ("Oponente 2 Gana Jugada");
+            oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
+        }
+        if (j2 == pa && j1 == pi){
+            r = ("Oponente 2 Gana Jugada");
+            oponentes[1].setPuntaje(oponentes[1].getPuntaje()+1);
+        }
+        if (j1 == j2){
+            r = ("Empate en Jugada");
+        }
+        this.getOponentes()[0].JugadaTurno(null);
+        this.getOponentes()[1].JugadaTurno(null);
          this.nPartidas++;
+         return r;
     }
     /*
     Analiza puntaje de oponentes
     Determina si hay ganador
     Evalua nPartidas
      */
-    public boolean EvalularPartidad(){
+    public String EvalularPartidad(){
         if (this.nPartidas == 5){
             if(oponentes[0].getPuntaje() == oponentes[1].getPuntaje()){
-             System.out.println("empate");
+                return "La partida termino en empate";
             }else if (oponentes[0].getPuntaje() > oponentes[1].getPuntaje()){
-             System.out.println("oponente[0] gana");
+                return "Oponente 1 gana la partida!";
             }else {
-             System.out.println("oponente[1] gana");
+                return "Oponente 2 gana la partida!";
             }
-            return true;
         }
-        return false;
+        return null;
     }
 
 

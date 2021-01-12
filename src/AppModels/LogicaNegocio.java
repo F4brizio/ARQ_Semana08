@@ -7,7 +7,7 @@ public class LogicaNegocio {
     public void guardarPartida(Partida p){
         servicio.guardar(p);
     }
-    public Partidas getPartidas(){
+    /*public Partidas getPartidas(){
         return servicio.getPartidas();
-    }
+    }*/
 }

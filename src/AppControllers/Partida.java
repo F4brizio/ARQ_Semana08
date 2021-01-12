@@ -1,30 +1,56 @@
 package AppControllers;
 
 import AppModels.Elemento;
+import AppModels.IJugador;
+import datos.Servicio;
 
 public class Partida {
-    AppViews.Partida partidaView;
+    Servicio srv = new Servicio();
+
+    //AppViews.Partida partidaView;
+    AppViews.PartidaConsole partidaView;
     AppModels.Partidas partidasManager = AppModels.Partidas.getInstance();
     public Partida() {
-        this.partidaView = new AppViews.Partida(this);
-        this.partidaView.setVisible(true);
+        this.partidaView = new AppViews.PartidaConsole(this);
+        this.partidaView.init();
         this.updatePoints();
     }
 
-    public void evalularJugada(Elemento a, Elemento b) {
-        System.out.println("evalularPartida " + a + " - " + b);
+    public String evalularJugada(Elemento a, Elemento b) {
         partidasManager.getPartida().getOponentes()[0].JugadaTurno(a);
         partidasManager.getPartida().getOponentes()[1].JugadaTurno(b);
-        partidasManager.getPartida().EvaluarJugada();
+        String r = partidasManager.getPartida().EvaluarJugada();
         updatePoints();
-        this.partidaView.lblpersonavspersona.setText(Integer.toString(partidasManager.getPartida().getnPartidas()));
-        if (partidasManager.getPartida().EvalularPartidad()){
-            this.partidaView.setVisible(false);
+        String e = partidasManager.getPartida().EvalularPartidad();
+        if (e != null){
+            r = e;
+        }
+        return r;
+    }
+    public void evaluar(){
+        String e = partidasManager.getPartida().EvalularPartidad();
+        if (e != null){
+            this.partidaView.close();
             new AppControllers.Principal();
         }
     }
 
+    public IJugador getOponenteA(){
+        return partidasManager.getPartida().getOponentes()[0];
+    }
+    public IJugador getOponenteB(){
+        return partidasManager.getPartida().getOponentes()[1];
+    }
+    public int getCountPartidas(){
+        return this.partidasManager.getPartida().getnPartidas();
+    }
     public void updatePoints(){
         this.partidaView.setPuntajes(partidasManager.getPartida().getOponentes()[0].getPuntaje(),partidasManager.getPartida().getOponentes()[1].getPuntaje());
+    }
+
+    public void SaveAndExit() {
+        srv.guardar(partidasManager.getPartida());
+        new AppControllers.Principal();
+        this.partidaView.close();
     }
 }

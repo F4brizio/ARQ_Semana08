@@ -7,6 +7,8 @@ package AppViews;
  */
 
 
+import java.util.Scanner;
+
 /**
  *
  * @author luisp
@@ -14,13 +16,19 @@ package AppViews;
 public class Principal extends javax.swing.JFrame {
 
     private AppControllers.Principal controller;
-
     /**
      * Creates new form PARTIDAS
      */
     public Principal(AppControllers.Principal controller) {
         this.controller = controller;
         initComponents();
+    }
+
+    public void init(){
+        this.setVisible(true);
+    }
+    public void close(){
+        this.setVisible(false);
     }
 
     /**

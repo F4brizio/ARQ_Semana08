@@ -2,17 +2,10 @@ package app;
 
 import AppControllers.Principal;
 import AppModels.Partidas;
+import jdk.nashorn.internal.runtime.regexp.joni.constants.AsmConstants;
 
 public class MainApp {
-
     public static void main(String[] args){
-
-        //Partidas partidasManager = Partidas.getInstance();
-
-        //partidasManager.CrearPartida("Partida1");
-
         AppControllers.Principal p = new Principal();
-
     }
-
 }

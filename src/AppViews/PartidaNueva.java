@@ -21,7 +21,12 @@ public class PartidaNueva extends javax.swing.JFrame {
         this.controller = controller;
         initComponents();
     }
-
+    public void init(){
+        this.setVisible(true);
+    }
+    public void close(){
+        this.setVisible(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
