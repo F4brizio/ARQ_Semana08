@@ -20,7 +20,14 @@ public class Maquina implements IJugador {
 
     @Override
     public void JugadaTurno(Elemento e) {
-        this.JugadaActual = e;
+        int numero = (int)(Math.random()*3);
+        if (numero == 1){
+            this.JugadaActual =Elemento.PIEDRA;
+        }else if (numero == 2){
+            this.JugadaActual =Elemento.PAPEL;
+        }else if (numero == 3){
+            this.JugadaActual =Elemento.TIJERA;
+        }
     }
 
     @Override
