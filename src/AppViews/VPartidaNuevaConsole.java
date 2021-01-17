@@ -31,17 +31,18 @@ public class VPartidaNuevaConsole {
                 while (opcLoopName){
                     System.out.println("Asignar un nombre a la partida:");
                     namep = teclado.next();
-                    if (namep != null){
+                    if (namep != null && namep != ""){
                         opcLoopName = false;
                     }
                 }
+                teclado.nextLine();
                 boolean opcLoopType = true;
                 String Modalidad = null;
                 while (opcLoopType){
                     System.out.println("Modalidad de juego:");
                     System.out.println("(1) Persona vs Persona");
                     System.out.println("(2) Persona vs Maquina");
-                    Integer opcModalidad;
+                    Integer opcModalidad = null;
                     opcModalidad = teclado.nextInt();
                     if (opcModalidad == 1){
                         Modalidad = "PvsP";
